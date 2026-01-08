@@ -163,7 +163,7 @@ export function useGame(config: GameConfig): Game {
         while (indexSet.has(i))
           i = floor(random(0, (index + 1) ** 2))
         const row = floor(i / (index + 1))
-        const column = index ? i % index : 0
+        const column = i % (index + 1)
         const node: CardNode = {
           id: `${index}-${i}`,
           type: k,
